@@ -79,3 +79,21 @@ console.log('Test isFull - expect true:', isFull(basket));
 
 // Stretch goal #3 added at line 9 
 
+// Stretch goal #4 
+function removeItem(item, array) {
+    if (array.indexOf(item) >= 0) {
+        let match = array.indexOf(item);
+        let deletion = array.splice(match, 1);
+        return deletion;
+    }
+
+    return null
+}
+
+console.log('Test removeItem (expect popsicles):', removeItem('popsicles', basket));
+console.log('Basket is now:', basket);
+
+console.log('Test removeItem (expect null):', removeItem('toast', basket));
+console.log('Basket remains:', basket);
+
+
